@@ -1,0 +1,10 @@
+host: https://circleci.com
+endpoint: graphql-unstable
+token: CCIPAT_AuxYeoUNy6SX726QBbjmy6_a6a3b4dd8158aaff4b98b2df1d41b07e82fa766d
+rest_endpoint: api/v2
+tls_cert: ""
+tls_insecure: false
+orb_publishing:
+    default_namespace: ""
+    default_vcs_provider: ""
+    default_owner: ""
