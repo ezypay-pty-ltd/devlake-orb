@@ -20,8 +20,8 @@ RESPONSE=$(curl "$DEVLAKE_ENDPOINT/api/rest/plugins/webhook/connections/1/deploy
     \"ref_name\":\"$CIRCLE_USERNAME\",
     \"start_time\":\"$start_time\"
 }")
-echo $RESPONSE
+echo "$RESPONSE"
 
-echo $PARAM_FAIL_BUILD
+echo "$PARAM_FAIL_BUILD"
 
-[[ "$(jq -r '.success' <<< $RESPONSE)" == "true" ]] && echo "Reported" || exit 1
+[[ "$(jq -r '.success' <<< ${RESPONSE})" == "true" ]] && echo "Reported" || exit 1
