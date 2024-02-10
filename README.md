@@ -1,15 +1,13 @@
-# Orb Template
+# Devlake Orb
 
 
 [![CircleCI Build Status](https://circleci.com/gh/ezypay-pty-ltd/devlake-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/ezypay-pty-ltd/devlake-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/ezypay/devlake-orb.svg)](https://circleci.com/developer/orbs/orb/ezypay/devlake-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/ezypay-pty-ltd/devlake-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 
 
-A project template for Orbs.
+Send (deployment) webhook event to Devlake instance for collection Dora metrics.
 
-This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
-
-_**Edit this area to include a custom title and description.**_
+See: https://devlake.apache.org/docs/Plugins/webhook/
 
 ---
 
@@ -25,9 +23,7 @@ We welcome [issues](https://github.com/ezypay-pty-ltd/devlake-orb/issues) to and
 
 ### How to Publish An Update
 1. Merge pull requests with desired changes to the main branch.
-    - For the best experience, squash-and-merge and use [Conventional Commit Messages](https://conventionalcommits.org/).
 2. Find the current version of the orb.
-    - You can run `circleci orb info ezypay/devlake-orb | grep "Latest"` to see the current version.
 3. Create a [new Release](https://github.com/ezypay-pty-ltd/devlake-orb/releases/new) on GitHub.
     - Click "Choose a tag" and _create_ a new [semantically versioned](http://semver.org/) tag. (ex: v1.0.0)
       - We will have an opportunity to change this before we publish if needed after the next step.
