@@ -4,7 +4,14 @@ description: >
   Expected Env Variables (in project or via Context) are:
     - DEVLAKE_ENDPOINT: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
     - DEVLAKE_API_KEY: "The API Key obtained from the devlake instance. Stored in Context that is used by job calling this orb"
+parameters:
+  fail_build:
+    type: boolean
+    default: true
+    description: Mark build as failed if the post fails.
 steps:
   - run:
       name: Report deployment
+      environment:
+        PARAM_FAIL_BUILD: << parameters.fail_build >>
       command: <<include(scripts/curl.sh)>>
