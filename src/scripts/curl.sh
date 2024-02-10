@@ -24,4 +24,4 @@ echo "$RESPONSE"
 
 echo "$PARAM_FAIL_BUILD"
 
-[[ "$(jq -r '.success' <<< ${RESPONSE})" == "true" ]] && echo "Reported" || exit 1
+[[ $(jq -r '.success' <<< "$RESPONSE") == "true" ]] && echo "Reported" || exit 1
