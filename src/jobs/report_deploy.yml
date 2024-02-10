@@ -1,0 +1,17 @@
+description: >
+  This job runs the post_webhook command to send a post to devlake.
+
+  Expected Env Variables (in project or via Context) are:
+    - DEVLAKE_ENDPOINT: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
+    - DEVLAKE_API_KEY: "The API Key obtained from the devlake instance. Stored in Context that is used by job calling this orb"
+
+executor: default
+
+parameters:
+  fail_build:
+    type: boolean
+    default: true
+    description: Mark build as failed if the post fails.
+steps:
+  - post_webhook:
+      fail_build: << parameters.fail_build >>

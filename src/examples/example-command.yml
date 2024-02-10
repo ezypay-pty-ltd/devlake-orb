@@ -1,0 +1,22 @@
+description: >
+  Example usage (as a command), using a context with the required ENV Vars.
+# Everything in the `usage` section will be displayed in the orb registry.
+# Comments are not retained.
+usage:
+  version: 2.1
+  orbs:
+    devlake-orb: ezypay/devlake-orb@1.2.3
+  workflows:
+    report_deployment:
+      jobs:
+        - your_deploy_job:
+            context: your_devlake_env_vars
+
+  jobs:
+    your_deploy_job:
+      docker:
+        - image: cimg/base:current
+      steps:
+        - do_stuff
+        - devlake-orb/post_webhook:
+            fail_build: false
