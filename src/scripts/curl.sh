@@ -19,4 +19,4 @@ curl "$DEVLAKE_ENDPOINT/api/rest/plugins/webhook/connections/1/deployments" -H "
     \"pipeline_id\":\"$CIRCLE_BUILD_NUM\",
     \"ref_name\":\"$CIRCLE_USERNAME\",
     \"start_time\":\"$start_time\"
-}"
+}" | jq -r '.success'
