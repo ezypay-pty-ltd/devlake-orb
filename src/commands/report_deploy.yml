@@ -2,7 +2,8 @@ description: >
   This command sends a post to devlake webhook indicating a deployment.
 parameters:
   endpoint:
-    type: string
+    type: env_var_name
+    default: ENDPOINT
     description: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
   api_key:
     type: env_var_name
