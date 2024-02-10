@@ -1,18 +1,10 @@
 description: >
   This command sends a post to devlake webhook indicating a deployment.
-parameters:
-  endpoint:
-    type: env_var_name
-    default: DEVLAKE_ENDPOINT
-    description: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
-  api_key:
-    type: env_var_name
-    default: DEVLAKE_API_KEY
-    description: "The API Key obtained from the devlake instance. Stored in Context that is used by job calling this orb"
+
+  Expected Env Variables (in project or via Context) are:
+    - DEVLAKE_ENDPOINT: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
+    - DEVLAKE_API_KEY: "The API Key obtained from the devlake instance. Stored in Context that is used by job calling this orb"
 steps:
   - run:
-      environment:
-        PARAM_ENDPOINT: << parameters.endpoint >>
-        PARAM_API_KEY: << parameters.api_key >>
       name: Report deployment
       command: <<include(scripts/curl.sh)>>
