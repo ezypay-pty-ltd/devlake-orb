@@ -7,14 +7,16 @@ usage:
   orbs:
     devlake-orb: ezypay/devlake-orb@1.2.3
   workflows:
-    report-deployment:
+    report_deployment:
       jobs:
-        - your-deploy-job:
-            context: your-devlake-env-vars
+        - your_deploy_job:
+            context: your_devlake_env_vars
 
   jobs:
-    your-deploy-job:
+    your_deploy_job:
+      docker:
+        - image: cimg/base:current
       steps:
-        - do-stuff
+        - do_stuff
         - devlake-orb/post_webhook:
             fail_build: false
