@@ -9,6 +9,9 @@ Send (deployment) webhook event to Devlake instance for collection Dora metrics.
 
 See: https://devlake.apache.org/docs/Plugins/webhook/
 
+
+**TODO**: add readme docs about using context and setting api key etc - also put it in the example...
+
 ---
 
 ## Resources
