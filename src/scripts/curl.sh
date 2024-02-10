@@ -12,4 +12,4 @@ echo "commit_sha: $CIRCLE_SHA1"
 echo "repo_url:   $CIRCLE_REPOSI"TORY_URL"
 echo "pipeline_id: $CIRCLE_BUILD_NUM"
 echo "ref_name:   $CIRCLE_USERNAME"
-echo "start_time: ${start_time}"
+echo $start_time
