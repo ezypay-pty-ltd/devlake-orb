@@ -5,8 +5,6 @@ description: >
     - DEVLAKE_ENDPOINT: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
     - DEVLAKE_API_KEY: "The API Key obtained from the devlake instance. Stored in Context that is used by job calling this orb"
 
-executor: default
-
 parameters:
   fail_build:
     type: boolean
