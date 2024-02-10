@@ -7,7 +7,7 @@ description: >
 parameters:
   fail_build:
     type: boolean
-    default: false
+    default: true
     description: Mark build as failed if the post fails.
 steps:
   - run:
