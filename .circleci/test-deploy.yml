@@ -27,7 +27,7 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - devlake-orb/report_deploy:
+      - devlake-orb/post_webhook:
           fail_build: false
 
 workflows:
