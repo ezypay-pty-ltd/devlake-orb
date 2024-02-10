@@ -3,7 +3,7 @@ description: >
 parameters:
   endpoint:
     type: env_var_name
-    default: ENDPOINT
+    default: DEVLAKE_ENDPOINT
     description: "The endpoint that devlake application is hosted at. example: https://devlake.example.com"
   api_key:
     type: env_var_name
