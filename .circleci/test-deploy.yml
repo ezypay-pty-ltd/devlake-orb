@@ -22,8 +22,6 @@ release-filters: &release-filters
 jobs:
   # Create jobs to test the commands of your orbs.
   command-test:
-    context:
-      - devlake-dora
     docker:
       - image: cimg/base:current
     steps:
@@ -37,6 +35,8 @@ workflows:
     jobs:
       # Make sure to include "filters: *filters" in every test job you want to run as part of your deployment.
       - command-test:
+          context:
+            - devlake-dora
           filters: *filters
       # The orb must be re-packed for publishing, and saved to the workspace.
       - orb-tools/pack:
