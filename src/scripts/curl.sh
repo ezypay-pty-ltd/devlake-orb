@@ -2,6 +2,7 @@
 
 # For ENV that are strings, need variable substitution
 # https://circleci.com/docs/orbs-best-practices/#accepting-parameters-as-strings-or-environment-variables
+REF_NAME=$(circleci env subst "$PARAM_REF_NAME")
 
 # TODO: get start time from before the deployment started with a different orb step
 start_time=$(date '+%Y-%m-%dT%H:%M:%S%z')
@@ -11,7 +12,7 @@ echo ""
 echo "commit_sha: $CIRCLE_SHA1"
 echo "repo_url:   $CIRCLE_REPOSITORY_URL"
 echo "pipeline_id: $CIRCLE_BUILD_NUM"
-echo "ref_name:   $CIRCLE_USERNAME"
+echo "ref_name:   $REF_NAME"
 echo "start_time: $start_time"
 echo "-------------"
 

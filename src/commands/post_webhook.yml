@@ -9,9 +9,14 @@ parameters:
     type: boolean
     default: true
     description: Mark build as failed if the post fails.
+  ref_name:
+    type: string
+    default: $CIRCLE_USERNAME
+    description: Additional info to reference the build by.
 steps:
   - run:
       name: Report deployment
       environment:
         PARAM_FAIL_BUILD: << parameters.fail_build >>
+        PARAM_REF_NAME: << parameters.ref_name >>
       command: <<include(scripts/curl.sh)>>
